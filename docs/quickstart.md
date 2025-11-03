@@ -148,3 +148,4 @@ Finally, generate tasks and implement the solution:
 - **Deep dive:** Read the [complete methodology](../spec-driven.md) for in-depth guidance
 - **Local development:** See [Local Development Guide](local-development.md) for CLI development workflows
 - **Troubleshooting:** Check the main [README troubleshooting section](../README.md#-troubleshooting)
+- **Update Spec Kit:** When a new Spec Kit release drops, run `specify update --dry-run` inside your project to preview template changes before applying them

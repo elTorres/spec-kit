@@ -7,6 +7,12 @@ All notable changes to the Specify CLI and templates are documented here.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Added
+
+- Introduced `specify update` for selectively refreshing templates, scripts, and command prompts without touching `.specify/memory` or previously generated specs, plans, and tasks. Supports dry-run previews, non-interactive application, and removes allowlisted files that were dropped upstream.
+
 ## [0.0.21] - 2025-10-21
 
 - Fixes [#975](https://github.com/github/spec-kit/issues/975) (thank you [@fgalarraga](https://github.com/fgalarraga)).
