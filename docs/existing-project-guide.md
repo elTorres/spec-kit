@@ -37,13 +37,13 @@ uvx --from git+https://github.com/github/spec-kit.git specify init --here --ai c
 
 Spec Kit registers these slash commands in your coding agent:
 
-- `/speckit.constitution`
-- `/speckit.specify`
-- `/speckit.clarify`
-- `/speckit.plan`
-- `/speckit.tasks`
-- `/speckit.analyze`
-- `/speckit.implement`
+* `/speckit.constitution`
+* `/speckit.specify`
+* `/speckit.clarify`
+* `/speckit.plan`
+* `/speckit.tasks`
+* `/speckit.analyze`
+* `/speckit.implement`
 
 ---
 
@@ -171,6 +171,6 @@ If your org enforces separation, use **two commits:** (1) specs + plan + tasks, 
 
 ## Next Steps
 
-- **Learn more:** Read the [complete Spec-Driven Development methodology](../spec-driven.md)
-- **New projects:** See the [Quick Start Guide](quickstart.md) for greenfield workflows
-- **Troubleshooting:** Check the main [README troubleshooting section](../README.md#-troubleshooting)
+* **Learn more:** Read the [complete Spec-Driven Development methodology](../spec-driven.md)
+* **New projects:** See the [Quick Start Guide](quickstart.md) for greenfield workflows
+* **Troubleshooting:** Check the main [README troubleshooting section](../README.md#-troubleshooting)
