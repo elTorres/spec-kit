@@ -6,68 +6,83 @@
 ## Technology Stack
 
 ### Languages
-- [LANGUAGE]: [VERSION]
+
+* [LANGUAGE]: [VERSION]
 
 ### Frameworks
-- [FRAMEWORK_NAME]: [VERSION]
+
+* [FRAMEWORK_NAME]: [VERSION]
 
 ### Key Dependencies
-- [DEPENDENCY]: [VERSION] - [PURPOSE]
+
+* [DEPENDENCY]: [VERSION] - [PURPOSE]
 ...
 
 ### Package Manager
-- [PACKAGE_MANAGER]
+
+* [PACKAGE_MANAGER]
 
 ### Build Tools
-- [BUILD_TOOL]
+
+* [BUILD_TOOL]
 
 ## Project Structure
 
 ### Architecture Pattern
+
 [DETECTED_PATTERN]
 
 ### Directory Structure
-```
+
+``` txt
 [DIRECTORY_TREE]
 ```
 
 ### Key Directories
-- [DIRECTORY]/ ...
+
+* [DIRECTORY]/ ...
 
 ## Code Conventions
 
 ### Naming Conventions
-- Files: [FILE_NAMING]
-- Variables: [VARIABLE_NAMING]
-- Functions: [FUNCTION_NAMING]
-- Classes: [CLASS_NAMING]
-- Constants: [CONSTANT_NAMING]
+
+* Files: [FILE_NAMING]
+* Variables: [VARIABLE_NAMING]
+* Functions: [FUNCTION_NAMING]
+* Classes: [CLASS_NAMING]
+* Constants: [CONSTANT_NAMING]
 
 ### Code Style
-- Indentation: [TABS_OR_SPACES] ([WIDTH])
-- Line length: [MAX_LENGTH] characters
-- Style guide: [STYLE_GUIDE_IF_CONFIGURED]
+
+* Indentation: [TABS_OR_SPACES] ([WIDTH])
+* Line length: [MAX_LENGTH] characters
+* Style guide: [STYLE_GUIDE_IF_CONFIGURED]
 
 ### Documentation
-- Format: [DOC_FORMAT]
-- Pattern: [DOC_PATTERN]
+
+* Format: [DOC_FORMAT]
+* Pattern: [DOC_PATTERN]
 
 ## Testing
 
 ### Test Framework
-- [TEST_FRAMEWORK]
+
+* [TEST_FRAMEWORK]
 
 ### Test Structure
-- Test directory: `[TEST_DIR]`
-- Test pattern: [TEST_FILE_PATTERN]
+
+* Test directory: `[TEST_DIR]`
+* Test pattern: [TEST_FILE_PATTERN]
 
 ### Coverage
-- Tool: [COVERAGE_TOOL]
-- Configuration: [COVERAGE_CONFIG_IF_PRESENT]
+
+* Tool: [COVERAGE_TOOL]
+* Configuration: [COVERAGE_CONFIG_IF_PRESENT]
 
 ### CI/CD
-- Platform: [CI_PLATFORM]
-- Configuration: `[CI_CONFIG_FILE]`
+
+* Platform: [CI_PLATFORM]
+* Configuration: `[CI_CONFIG_FILE]`
 
 ## Notes
 
