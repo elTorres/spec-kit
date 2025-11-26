@@ -209,6 +209,12 @@ AGENT_CONFIG = {
         "install_url": "https://ampcode.com/manual#install",
         "requires_cli": True,
     },
+    "shai": {
+        "name": "SHAI",
+        "folder": ".shai/",
+        "install_url": "https://github.com/ovh/shai",
+        "requires_cli": True,
+    },
 }
 
 SCRIPT_TYPE_CHOICES = {"sh": "POSIX Shell (bash/zsh)", "ps": "PowerShell"}
@@ -1202,7 +1208,7 @@ def ensure_executable_scripts(project_path: Path, tracker: StepTracker | None = 
 @app.command()
 def init(
     project_name: str = typer.Argument(None, help="Name for your new project directory (optional if using --here, or use '.' for current directory)"),
-    ai_assistant: str = typer.Option(None, "--ai", help="AI assistant to use: claude, gemini, copilot, cursor-agent, qwen, opencode, codex, windsurf, kilocode, auggie, codebuddy, amp, or q"),
+    ai_assistant: str = typer.Option(None, "--ai", help="AI assistant to use: claude, gemini, copilot, cursor-agent, qwen, opencode, codex, windsurf, kilocode, auggie, codebuddy, amp, shai, or q"),
     script_type: str = typer.Option(None, "--script", help="Script type to use: sh or ps"),
     ignore_agent_tools: bool = typer.Option(False, "--ignore-agent-tools", help="Skip checks for AI agent tools like Claude Code"),
     no_git: bool = typer.Option(False, "--no-git", help="Skip git repository initialization"),
@@ -2043,7 +2049,7 @@ def version():
     info_table.add_row("Template Version", template_version)
     info_table.add_row("Released", release_date)
     info_table.add_row("", "")
-    info_table.add_row("Python", f"{sys.version_info.major}.{sys.version_info.minor}.{sys.version_info.micro}")
+    info_table.add_row("Python", platform.python_version())
     info_table.add_row("Platform", platform.system())
     info_table.add_row("Architecture", platform.machine())
     info_table.add_row("OS Version", platform.version())

@@ -33,7 +33,7 @@ Specify supports multiple AI agents by generating agent-specific command files a
 |-------|-----------|---------|----------|-------------|
 | **Claude Code** | `.claude/commands/` | Markdown | `claude` | Anthropic's Claude Code CLI |
 | **Gemini CLI** | `.gemini/commands/` | TOML | `gemini` | Google's Gemini CLI |
-| **GitHub Copilot** | `.github/chatmodes/` | Markdown | N/A (IDE-based) | GitHub Copilot in VS Code |
+| **GitHub Copilot** | `.github/agents/` | Markdown | N/A (IDE-based) | GitHub Copilot in VS Code |
 | **Cursor** | `.cursor/commands/` | Markdown | `cursor-agent` | Cursor CLI |
 | **Qwen Code** | `.qwen/commands/` | TOML | `qwen` | Alibaba's Qwen Code CLI |
 | **opencode** | `.opencode/command/` | Markdown | `opencode` | opencode CLI |
@@ -45,6 +45,7 @@ Specify supports multiple AI agents by generating agent-specific command files a
 | **CodeBuddy CLI** | `.codebuddy/commands/` | Markdown | `codebuddy` | CodeBuddy CLI |
 | **Amazon Q Developer CLI** | `.amazonq/prompts/` | Markdown | `q` | Amazon Q Developer CLI |
 | **Amp** | `.agents/commands/` | Markdown | `amp` | Amp CLI |
+| **SHAI** | `.shai/commands/` | Markdown | `shai` | SHAI CLI |
 
 ### Step-by-Step Integration Guide
 
@@ -311,6 +312,7 @@ Require a command-line tool to be installed:
 - **Amazon Q Developer CLI**: `q` CLI
 - **CodeBuddy CLI**: `codebuddy` CLI
 - **Amp**: `amp` CLI
+- **SHAI**: `shai` CLI
 
 ### IDE-Based Agents
 
@@ -323,7 +325,7 @@ Work within integrated development environments:
 
 ### Markdown Format
 
-Used by: Claude, Cursor, opencode, Windsurf, Amazon Q Developer, Amp
+Used by: Claude, Cursor, opencode, Windsurf, Amazon Q Developer, Amp, SHAI
 
 **Standard format:**
 
@@ -362,7 +364,7 @@ Command content with {SCRIPT} and {{args}} placeholders.
 
 - **CLI agents**: Usually `.<agent-name>/commands/`
 - **IDE agents**: Follow IDE-specific patterns:
-  - Copilot: `.github/chatmodes/`
+  - Copilot: `.github/agents/`
   - Cursor: `.cursor/commands/`
   - Windsurf: `.windsurf/workflows/`
 

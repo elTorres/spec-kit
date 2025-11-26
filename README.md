@@ -61,7 +61,7 @@ specify init <PROJECT_NAME>
 specify check
 ```
 
-To upgrade specify run:
+To upgrade Specify, see the [Upgrade Guide](./docs/upgrade.md) for detailed instructions. Quick upgrade:
 
 ```bash
 uv tool install specify-cli --force --from git+https://github.com/github/spec-kit.git
@@ -150,6 +150,7 @@ Want to see Spec Kit in action? Watch our [video overview](https://www.youtube.c
 | [Codex CLI](https://github.com/openai/codex)              | ✅ |                                                   |
 | [Amazon Q Developer CLI](https://aws.amazon.com/developer/learning/q-developer-cli/) | ⚠️ | Amazon Q Developer CLI [does not support](https://github.com/aws/amazon-q-developer-cli/issues/3064) custom arguments for slash commands. |
 | [Amp](https://ampcode.com/) | ✅ | |
+| [SHAI (OVHcloud)](https://github.com/ovh/shai) | ✅ | |
 
 ## 🔧 Specify CLI Reference
 
@@ -162,14 +163,14 @@ The `specify` command supports the following options:
 | `init`      | Initialize a new Specify project from the latest template      |
 | `summarize` | Generate a comprehensive summary of an existing project's technology stack, architecture, and code conventions |
 | `update`    | Refresh templates and scripts in an existing project without touching generated artifacts |
-| `check`     | Check for installed tools (`git`, `claude`, `gemini`, `code`/`code-insiders`, `cursor-agent`, `windsurf`, `qwen`, `opencode`, `codex`) |
+| `check`     | Check for installed tools (`git`, `claude`, `gemini`, `code`/`code-insiders`, `cursor-agent`, `windsurf`, `qwen`, `opencode`, `codex`, `shai`) |
 
 ### `specify init` Arguments & Options
 
 | Argument/Option        | Type     | Description                                                                  |
 |------------------------|----------|------------------------------------------------------------------------------|
 | `<project-name>`       | Argument | Name for your new project directory (optional if using `--here`, or use `.` for current directory) |
-| `--ai`                 | Option   | AI assistant to use: `claude`, `gemini`, `copilot`, `cursor-agent`, `qwen`, `opencode`, `codex`, `windsurf`, `kilocode`, `auggie`, `roo`, `codebuddy`, `amp`, or `q` |
+| `--ai`                 | Option   | AI assistant to use: `claude`, `gemini`, `copilot`, `cursor-agent`, `qwen`, `opencode`, `codex`, `windsurf`, `kilocode`, `auggie`, `roo`, `codebuddy`, `amp`, `shai`, or `q` |
 | `--script`             | Option   | Script variant to use: `sh` (bash/zsh) or `ps` (PowerShell)                 |
 | `--ignore-agent-tools` | Flag     | Skip checks for AI agent tools like Claude Code                             |
 | `--no-git`             | Flag     | Skip git repository initialization                                          |
@@ -197,6 +198,9 @@ specify init my-project --ai windsurf
 # Initialize with Amp support
 specify init my-project --ai amp
 
+# Initialize with SHAI support
+specify init my-project --ai shai
+
 # Initialize with PowerShell scripts (Windows/cross-platform)
 specify init my-project --ai copilot --script ps
 
@@ -207,7 +211,7 @@ specify init --here --ai copilot
 
 # Force merge into current (non-empty) directory without confirmation
 specify init . --force --ai copilot
-# or 
+# or
 specify init --here --force --ai copilot
 
 # Skip git initialization
