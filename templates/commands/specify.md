@@ -46,12 +46,12 @@ Given that feature description, do this:
       ```bash
       git fetch --all --prune
       ```
-   
-   b. Find the highest feature number across all feature branches:
-      - Remote branches: `git ls-remote --heads origin | grep -E 'refs/heads/[0-9]+-'`
-      - Local branches: `git branch | grep -E '^[* ]*[0-9]+-'`
-      - Specs directories: Check for directories matching `specs/[0-9]+-*`
-   
+
+   b. Find the highest feature number across all sources for the short-name:
+      - Remote branches: `git ls-remote --heads origin | grep -E 'refs/heads/[0-9]+-<short-name>$'`
+      - Local branches: `git branch | grep -E '^[* ]*[0-9]+-<short-name>$'`
+      - Specs directories: Check for directories matching `specs/[0-9]+-<short-name>`
+
    c. Determine the next available number:
       - Extract all numbers from all three sources (all feature branches, not just matching short-name)
       - Find the highest number N across ALL features
