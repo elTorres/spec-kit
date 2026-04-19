@@ -189,7 +189,7 @@ The following community-contributed extensions are available in [`catalog.commun
 - `Read+Write` — modifies files, creates artifacts, or updates specs
 
 | Extension | Purpose | Category | Effect | URL |
-|-----------|---------|----------|--------|-----|
+| --------- | ------- | -------- | ------ | --- |
 | Agent Assign | Assign specialized Claude Code agents to spec-kit tasks for targeted execution | `process` | Read+Write | [spec-kit-agent-assign](https://github.com/xymelon/spec-kit-agent-assign) |
 | AI-Driven Engineering (AIDE) | A structured 7-step workflow for building new projects from scratch with AI assistants — from vision through implementation | `process` | Read+Write | [aide](https://github.com/mnriem/spec-kit-extensions/tree/main/aide) |
 | Architect Impact Previewer | Predicts architectural impact, complexity, and risks of proposed changes before implementation. | `visibility` | Read-only | [spec-kit-architect-preview](https://github.com/UmmeHabiba1312/spec-kit-architect-preview) |
@@ -270,7 +270,7 @@ To submit your own extension, see the [Extension Publishing Guide](extensions/EX
 The following community-contributed presets customize how Spec Kit behaves — overriding templates, commands, and terminology without changing any tooling. Presets are available in [`catalog.community.json`](presets/catalog.community.json):
 
 | Preset | Purpose | Provides | Requires | URL |
-|--------|---------|----------|----------|-----|
+| ------ | ------- | -------- | -------- | --- |
 | AIDE In-Place Migration | Adapts the AIDE extension workflow for in-place technology migrations (X → Y pattern) — adds migration objectives, verification gates, knowledge documents, and behavioral equivalence criteria | 2 templates, 8 commands | AIDE extension | [spec-kit-presets](https://github.com/mnriem/spec-kit-presets) |
 | Canon Core | Adapts original Spec Kit workflow to work together with Canon extension | 2 templates, 8 commands | — | [spec-kit-canon](https://github.com/maximiliamus/spec-kit-canon) |
 | Explicit Task Dependencies | Adds explicit `(depends on T###)` dependency declarations and an Execution Wave DAG to tasks.md for parallel scheduling | 1 template, 1 command | — | [spec-kit-preset-explicit-task-dependencies](https://github.com/Quratulain-bilal/spec-kit-preset-explicit-task-dependencies) |
@@ -313,7 +313,7 @@ Spec Kit works with 30+ AI coding agents — both CLI tools and IDE-based assist
 
 Run `specify integration list` to see all available integrations in your installed version.
 
-## Available Slash Commands
+### Available Slash Commands
 
 After running `specify init`, your AI coding agent will have access to these slash commands for structured development. If you pass `--ai <agent> --ai-skills`, Spec Kit installs agent skills instead of slash-command prompt files; `--ai-skills` requires `--ai`.
 

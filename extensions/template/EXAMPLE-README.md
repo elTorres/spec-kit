@@ -85,14 +85,14 @@ Description of what this command does.
 ### Connection Settings
 
 | Setting | Type | Required | Description |
-|---------|------|----------|-------------|
+|-------- | ---- | -------- | ----------- |
 | `connection.url` | string | Yes | API endpoint URL |
 | `connection.api_key` | string | Yes | API authentication key |
 
 ### Project Settings
 
 | Setting | Type | Required | Description |
-|---------|------|----------|-------------|
+| ------- | ---- | -------- | ----------- |
 | `project.id` | string | Yes | Project identifier |
 | `project.workspace` | string | No | Workspace or organization |
 

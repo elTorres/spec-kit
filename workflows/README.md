@@ -262,7 +262,7 @@ inputs:
 ```
 
 | Type | Accepts | Example |
-|------|---------|---------|
+| ---- | ------- | ------- |
 | `string` | Any string | `"user-auth"` |
 | `number` | Numeric strings → int/float | `"42"` → `42` |
 | `boolean` | `true`/`1`/`yes` → `True`, `false`/`0`/`no` → `False` | `"true"` → `True` |
@@ -315,19 +315,19 @@ specify workflow catalog remove <index>
 ## Environment Variables
 
 | Variable | Description |
-|----------|-------------|
+| -------- | ----------- |
 | `SPECKIT_WORKFLOW_CATALOG_URL` | Override the catalog URL (replaces all defaults) |
 
 ## Configuration Files
 
 | File | Scope | Description |
-|------|-------|-------------|
+| ---- | ----- | ----------- |
 | `.specify/workflow-catalogs.yml` | Project | Custom catalog stack for this project |
 | `~/.specify/workflow-catalogs.yml` | User | Custom catalog stack for all projects |
 
 ## Repository Layout
 
-```
+```txt
 workflows/
 ├── ARCHITECTURE.md                         # Internal architecture documentation
 ├── PUBLISHING.md                           # Guide for submitting workflows to the catalog

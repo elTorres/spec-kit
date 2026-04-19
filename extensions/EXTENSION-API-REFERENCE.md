@@ -264,7 +264,7 @@ entry = CatalogEntry(
 **Fields**:
 
 | Field | Type | Description |
-|-------|------|-------------|
+| ----- | ---- | ----------- |
 | `url` | `str` | Catalog URL (must use HTTPS, or HTTP for localhost) |
 | `name` | `str` | Human-readable catalog name |
 | `priority` | `int` | Sort order (lower = higher priority, wins on conflicts) |
@@ -322,7 +322,7 @@ catalog.clear_cache()
 Each extension dict returned by `search()` and `get_extension_info()` includes:
 
 | Field | Type | Description |
-|-------|------|-------------|
+| ----- | ---- | ----------- |
 | `_catalog_name` | `str` | Name of the source catalog |
 | `_install_allowed` | `bool` | Whether installation is allowed from this catalog |
 

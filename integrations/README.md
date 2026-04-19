@@ -107,7 +107,7 @@ Both catalog files follow the same JSON schema:
 ### Required Fields
 
 | Field | Type | Description |
-|-------|------|-------------|
+| ----- | ---- | ----------- |
 | `schema_version` | string | Must be `"1.0"` |
 | `updated_at` | string | ISO 8601 timestamp |
 | `integrations` | object | Map of integration ID → metadata |
@@ -115,7 +115,7 @@ Both catalog files follow the same JSON schema:
 ### Integration Entry Fields
 
 | Field | Type | Required | Description |
-|-------|------|----------|-------------|
+| ----- | ---- | -------- | ----------- |
 | `id` | string | Yes | Unique ID (lowercase alphanumeric + hyphens) |
 | `name` | string | Yes | Human-readable display name |
 | `version` | string | Yes | PEP 440 version (e.g., `1.0.0`, `1.0.0a1`) |

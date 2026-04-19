@@ -421,7 +421,7 @@ hooks:
 In addition to extension-specific environment variables (`SPECKIT_{EXT_ID}_*`), spec-kit supports core environment variables:
 
 | Variable | Description | Default |
-|----------|-------------|---------|
+| -------- | ----------- | ------- |
 | `SPECKIT_CATALOG_URL`       | Override the full catalog stack with a single URL (backward compat) | Built-in default stack |
 | `GH_TOKEN` / `GITHUB_TOKEN` | GitHub API token for downloads     | None                  |
 
@@ -442,7 +442,7 @@ export SPECKIT_CATALOG_URL="https://example.com/staging/catalog.json"
 Spec Kit uses a **catalog stack** — an ordered list of catalogs searched simultaneously. By default, two catalogs are active:
 
 | Priority | Catalog | Install Allowed | Purpose |
-|----------|---------|-----------------|---------|
+| -------- | ------- | --------------- | ------- |
 | 1 | `catalog.json` (default) | ✅ Yes | Curated extensions available for installation |
 | 2 | `catalog.community.json` (community) | ❌ No (discovery only) | Browse community extensions |
 

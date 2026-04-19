@@ -52,6 +52,7 @@ Analyze the standard output of the three steps.
 Generate a terminal-style test output format detailing the results of discovery, installation, and registration. Return this directly to the user.
 
 Example output format:
+
 ```text
 ============================= test session starts ==============================
 collected 3 items

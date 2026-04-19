@@ -80,7 +80,7 @@ When a `gate` step pauses execution, the engine persists `current_step_index` an
 The engine ships with 10 built-in step types, each in its own subpackage under `src/specify_cli/workflows/steps/`:
 
 | Type Key | Class | Purpose | Returns `next_steps`? |
-|----------|-------|---------|-----------------------|
+| -------- | ----- | ------- | --------------------- |
 | `command` | `CommandStep` | Invoke an installed Spec Kit command via integration CLI | No |
 | `prompt` | `PromptStep` | Send an arbitrary inline prompt to integration CLI | No |
 | `shell` | `ShellStep` | Run a shell command, capture output | No |
@@ -107,7 +107,7 @@ Registration is explicit — each step class is imported and instantiated. New s
 Workflow definitions use Jinja2-like `{{ expression }}` syntax for dynamic values. The expression engine in `src/specify_cli/workflows/expressions.py` supports:
 
 | Feature | Syntax | Example |
-|---------|--------|---------|
+| ------- | ------ | ------- |
 | Variable access | `{{ inputs.name }}` | Dot-path traversal into context |
 | Step outputs | `{{ steps.plan.output.file }}` | Access previous step results |
 | Comparisons | `==`, `!=`, `>`, `<`, `>=`, `<=` | `{{ count > 5 }}` |
@@ -126,7 +126,7 @@ Workflow definitions use Jinja2-like `{{ expression }}` syntax for dynamic value
 The expression evaluator builds a namespace from the `StepContext`:
 
 | Key | Source | Available when |
-|-----|--------|----------------|
+| --- | ------ | -------------- |
 | `inputs` | Resolved workflow inputs | Always |
 | `steps` | Accumulated step results | After first step |
 | `item` | Current iteration item | Inside fan-out |
@@ -137,7 +137,7 @@ The expression evaluator builds a namespace from the `StepContext`:
 When a workflow is executed, `_resolve_inputs()` validates and coerces provided values against the `inputs:` schema:
 
 | Declared Type | Coercion | Example |
-|---------------|----------|---------|
+| ------------- | -------- | ------- |
 | `string` | None (pass-through) | `"my-feature"` |
 | `number` | `float()` → `int()` if whole | `"42"` → `42` |
 | `boolean` | `"true"/"1"/"yes"` → `True` | `"false"` → `False` |
@@ -174,7 +174,7 @@ When `specify workflow add <id>` installs from catalog, it downloads the workflo
 ## State and Configuration Locations
 
 | Component | Location | Format | Purpose |
-|-----------|----------|--------|---------|
+| --------- | -------- | ------ | ------- |
 | Workflow definitions | `.specify/workflows/{id}/workflow.yml` | YAML | Installed workflow definitions |
 | Workflow registry | `.specify/workflows/workflow-registry.json` | JSON | Installed workflows metadata |
 | Run state | `.specify/workflows/runs/{run_id}/state.json` | JSON | Persisted execution state |
@@ -186,7 +186,7 @@ When `specify workflow add <id>` installs from catalog, it downloads the workflo
 
 ## Module Structure
 
-```
+```txt
 src/specify_cli/
 ├── workflows/
 │   ├── __init__.py          # STEP_REGISTRY + _register_builtin_steps()

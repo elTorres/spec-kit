@@ -15,7 +15,7 @@ This extension provides Git operations as an optional, self-contained module. It
 ## Commands
 
 | Command | Description |
-|---------|-------------|
+| ------- | ----------- |
 | `speckit.git.initialize` | Initialize a Git repository with a configurable commit message |
 | `speckit.git.feature` | Create a feature branch with sequential or timestamp numbering |
 | `speckit.git.validate` | Validate current branch follows feature branch naming conventions |
@@ -25,7 +25,7 @@ This extension provides Git operations as an optional, self-contained module. It
 ## Hooks
 
 | Event | Command | Optional | Description |
-|-------|---------|----------|-------------|
+| ----- | ------- | -------- | ----------- |
 | `before_constitution` | `speckit.git.initialize` | No | Init git repo before constitution |
 | `before_specify` | `speckit.git.feature` | No | Create feature branch before specification |
 | `before_clarify` | `speckit.git.commit` | Yes | Commit outstanding changes before clarification |
@@ -85,6 +85,7 @@ specify extension enable git
 ## Graceful Degradation
 
 When Git is not installed or the directory is not a Git repository:
+
 - Spec directories are still created under `specs/`
 - Branch creation is skipped with a warning
 - Branch validation is skipped with a warning

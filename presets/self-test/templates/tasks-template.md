@@ -12,6 +12,6 @@
 ## Estimation
 
 | Task | Estimate |
-|------|----------|
+| ---- | -------- |
 | Task 1 | TBD |
 | Task 2 | TBD |

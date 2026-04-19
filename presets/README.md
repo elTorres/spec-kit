@@ -94,13 +94,13 @@ See [scaffold/](scaffold/) for a scaffold you can copy to create your own preset
 ## Environment Variables
 
 | Variable | Description |
-|----------|-------------|
+| -------- | ----------- |
 | `SPECKIT_PRESET_CATALOG_URL` | Override the catalog URL (replaces all defaults) |
 
 ## Configuration Files
 
 | File | Scope | Description |
-|------|-------|-------------|
+| ---- | ----- | ----------- |
 | `.specify/preset-catalogs.yml` | Project | Custom catalog stack for this project |
 | `~/.specify/preset-catalogs.yml` | User | Custom catalog stack for all projects |
 
@@ -111,7 +111,7 @@ The following enhancements are under consideration for future releases:
 - **Composition strategies** — Allow presets to declare a `strategy` per template instead of the default `replace`:
 
   | Type | `replace` | `prepend` | `append` | `wrap` |
-  |------|-----------|-----------|----------|--------|
+  | ---- | --------- | --------- | -------- | ------ |
   | **template** | ✓ (default) | ✓ | ✓ | ✓ |
   | **command** | ✓ (default) | ✓ | ✓ | ✓ |
   | **script** | ✓ (default) | — | — | ✓ |

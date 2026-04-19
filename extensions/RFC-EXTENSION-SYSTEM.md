@@ -981,7 +981,7 @@ The active catalog stack is resolved in this order (first match wins):
 When no config file exists, the CLI uses:
 
 | Priority | Catalog | install_allowed | Purpose |
-|----------|---------|-----------------|---------|
+| -------- | ------- | --------------- | ------- |
 | 1 | `catalog.json` (default) | `true` | Curated extensions available for installation |
 | 2 | `catalog.community.json` (community) | `false` | Discovery only — browse but not install |
 
@@ -1042,7 +1042,7 @@ When the same extension `id` appears in multiple catalogs, the higher-priority (
 
 Extensions from discovery-only catalogs are shown in `specify extension search` results but cannot be installed directly:
 
-```
+```txt
 ⚠  'linear' is available in the 'community' catalog but installation is not allowed from that catalog.
 
 To enable installation, add 'linear' to an approved catalog (install_allowed: true) in .specify/extension-catalogs.yml.
@@ -1062,11 +1062,13 @@ specify extension add jira     # Installs from custom catalog
 ```
 
 **Requirements:**
+
 - URL must use HTTPS (HTTP only allowed for localhost testing)
 - Catalog must follow the standard catalog.json schema
 - Must be publicly accessible or accessible within your network
 
 **Example for testing:**
+
 ```bash
 # Test with localhost during development
 export SPECKIT_CATALOG_URL="http://localhost:8000/catalog.json"
@@ -1116,7 +1118,7 @@ Found 1 extension:
 │ jira (v1.0.0) ✓ Verified                                │
 │ Jira Integration                                        │
 │                                                         │
-│ Create Jira Epics, Stories, and Issues from spec-kit   │
+│ Create Jira Epics, Stories, and Issues from spec-kit    │
 │ artifacts                                               │
 │                                                         │
 │ Author: Stats Perform                                   │
@@ -1855,7 +1857,7 @@ spec-kit-jira/
 **Planned support matrix:**
 
 | Extension Feature | Spec Kit Version | AI Agent Support |
-|-------------------|------------------|------------------|
+| ----------------- | ---------------- | ---------------- |
 | Basic commands | 0.2.0+ | Claude, Gemini, Copilot |
 | Hooks (after_tasks) | 0.3.0+ | Claude, Gemini |
 | Config validation | 0.2.0+ | All |

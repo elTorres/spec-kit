@@ -44,15 +44,15 @@ if [ ! -f "$config_file" ]; then
   exit 1
 fi
 
-# Read configuration values
+## Read configuration values
 
 setting_value=$(yq eval '.settings.key' "$config_file")
 
-# Apply environment variable overrides
+## Apply environment variable overrides
 
 setting_value="${SPECKIT_MY_EXTENSION_KEY:-$setting_value}"
 
-# Validate configuration
+## Validate configuration
 
 if [ -z "$setting_value" ]; then
   echo "❌ Error: Configuration value not set"
@@ -178,32 +178,32 @@ cp .specify/extensions/my-extension/config-template.yml \
 
 ### Example 1: Basic Usage
 
-``bash
+```bash
 
 # Run with default configuration
 >
 > /speckit.my-extension.example
-``
+```
 
 ### Example 2: With Environment Override
 
-``bash
+```bash
 
 # Override configuration with environment variable
 
 export SPECKIT_MY_EXTENSION_KEY="custom-value"
 > /speckit.my-extension.example
-``
+```
 
 ### Example 3: After Core Command
 
-``bash
+```bash
 
 # Use as part of a workflow
 >
 > /speckit.tasks
 > /speckit.my-extension.example
-``
+```
 
 ---
 

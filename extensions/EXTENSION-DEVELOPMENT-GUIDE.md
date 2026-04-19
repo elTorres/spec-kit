@@ -382,7 +382,7 @@ CONTRIBUTING.md
 ### Pattern Matching
 
 | Pattern | Matches | Does NOT match |
-|---------|---------|----------------|
+| ------- | ------- | -------------- |
 | `*.pyc` | Any `.pyc` file in any directory | — |
 | `tests/` | The `tests` directory (and all its contents) | A file named `tests` |
 | `docs/*.draft.md` | `docs/api.draft.md` (directly inside `docs/`) | `docs/sub/api.draft.md` (nested) |

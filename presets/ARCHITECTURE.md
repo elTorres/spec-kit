@@ -28,7 +28,7 @@ flowchart TD
 ```
 
 | Priority | Source | Path | Use case |
-|----------|--------|------|----------|
+| -------- | ------ | ---- | -------- |
 | 1 (highest) | Override | `.specify/templates/overrides/` | One-off project-local tweaks |
 | 2 | Preset | `.specify/presets/<id>/templates/` | Shareable, stackable customizations |
 | 3 | Extension | `.specify/extensions/<id>/templates/` | Extension-provided templates |
@@ -37,6 +37,7 @@ flowchart TD
 When multiple presets are installed, they're sorted by their `priority` field (lower number = higher precedence). This is set via `--priority` on `specify preset add`.
 
 The resolution is implemented three times to ensure consistency:
+
 - **Python**: `PresetResolver` in `src/specify_cli/presets.py`
 - **Bash**: `resolve_template()` in `scripts/bash/common.sh`
 - **PowerShell**: `Resolve-Template` in `scripts/powershell/common.ps1`
@@ -80,7 +81,7 @@ Core commands (e.g. `speckit.specify`, with only 2 segments) are always register
 The `CommandRegistrar` renders commands differently per agent:
 
 | Agent | Format | Extension | Arg placeholder |
-|-------|--------|-----------|-----------------|
+| ----- | ------ | --------- | --------------- |
 | Claude, Cursor, opencode, Windsurf, etc. | Markdown | `.md` | `$ARGUMENTS` |
 | Copilot | Markdown | `.agent.md` + `.prompt.md` | `$ARGUMENTS` |
 | Gemini, Qwen, Tabnine | TOML | `.toml` | `{{args}}` |
@@ -115,7 +116,7 @@ Catalogs are fetched with a 1-hour cache (per-URL, SHA256-hashed cache files). E
 
 ## Repository Layout
 
-```
+```txt
 presets/
 ├── ARCHITECTURE.md                         # This file
 ├── PUBLISHING.md                           # Guide for submitting presets to the catalog
@@ -146,7 +147,7 @@ presets/
 
 ## Module Structure
 
-```
+```txt
 src/specify_cli/
 ├── agents.py       # CommandRegistrar — shared infrastructure for writing
 │                    #   command files to agent directories
