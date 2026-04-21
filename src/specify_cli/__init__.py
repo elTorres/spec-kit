@@ -1130,20 +1130,17 @@ def init(
                     console.print("[yellow]Template files will be merged with existing content and may overwrite existing files[/yellow]")
                 console.print(f"[cyan]--force supplied: merging into existing directory '[cyan]{project_name}[/cyan]'[/cyan]")
             else:
-                if (project_path / ".specify").exists():
-                    console.print(f"[cyan]Project folder detected. Adding new integration/agent to existing setup...[/cyan]")
-                elif existing_items:
-                    if force:
-                        console.print(f"[cyan]--force supplied: merging into existing directory '[cyan]{project_name}[/cyan]'[/cyan]")
-                    else:
-                        error_panel = Panel(
-                            f"Directory '[cyan]{project_name}[/cyan]' already exists and is not empty.\n"
-                            "Use [bold]--force[/bold] to initialize anyway.",
-                            title="[red]Directory Conflict[/red]",
-                            border_style="red"
-                        )
-                        console.print(error_panel)
-                        raise typer.Exit(1)
+                error_panel = Panel(
+                    f"Directory already exists: '[cyan]{project_name}[/cyan]'\n"
+                    "Please choose a different project name or remove the existing directory.\n"
+                    "Use [bold]--force[/bold] to merge into the existing directory.",
+                    title="[red]Directory Conflict[/red]",
+                    border_style="red",
+                    padding=(1, 2)
+                )
+                console.print()
+                console.print(error_panel)
+                raise typer.Exit(1)
 
     if ai_assistant:
         if ai_assistant not in AGENT_CONFIG:
@@ -1390,7 +1387,6 @@ def init(
                 "branch_numbering": branch_numbering or "sequential",
                 "context_file": resolved_integration.context_file,
                 "here": here,
-                "preset": preset,
                 "script": selected_script,
                 "speckit_version": get_speckit_version(),
             }
